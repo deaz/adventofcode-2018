@@ -1,7 +1,7 @@
 pub fn f(input: &str) -> String {
     input
         .lines()
-        .map(|s| s.parse::<i32>().expect(&format!("hoho {}", s)))
+        .map(|s| s.parse::<i32>().unwrap())
         .sum::<i32>()
         .to_string()
 }
