@@ -1,13 +1,16 @@
 use std::fs::File;
 use std::io::prelude::*;
 
+#[cfg(test)]
+#[macro_use]
+mod test_utils;
 mod puzzle_01;
 mod puzzle_02;
-#[cfg(test)]
-mod test_utils;
+mod puzzle_03;
+mod puzzle_04;
 
-const PUZZLE_NUMBER: u8 = 2;
-const SOLVERS: [fn(&str) -> String; 2] = [puzzle_01::f, puzzle_02::f];
+const PUZZLE_NUMBER: u8 = 4;
+const SOLVERS: [fn(&str) -> String; 4] = [puzzle_01::f, puzzle_02::f, puzzle_03::f, puzzle_04::f];
 
 fn main() {
     let mut f = File::open(format!("input/puzzle_{:02}.txt", PUZZLE_NUMBER)).unwrap();
