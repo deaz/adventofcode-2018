@@ -8,9 +8,18 @@ mod puzzle_01;
 mod puzzle_02;
 mod puzzle_03;
 mod puzzle_04;
+mod puzzle_05;
+mod puzzle_06;
 
-const PUZZLE_NUMBER: u8 = 4;
-const SOLVERS: [fn(&str) -> String; 4] = [puzzle_01::f, puzzle_02::f, puzzle_03::f, puzzle_04::f];
+const PUZZLE_NUMBER: u8 = 6;
+const SOLVERS: [fn(&str) -> String; 6] = [
+    puzzle_01::f,
+    puzzle_02::f,
+    puzzle_03::f,
+    puzzle_04::f,
+    puzzle_05::f,
+    puzzle_06::f,
+];
 
 fn main() {
     let mut f = File::open(format!("input/puzzle_{:02}.txt", PUZZLE_NUMBER)).unwrap();
