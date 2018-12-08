@@ -10,15 +10,17 @@ mod puzzle_03;
 mod puzzle_04;
 mod puzzle_05;
 mod puzzle_06;
+mod puzzle_07;
 
-const PUZZLE_NUMBER: u8 = 6;
-const SOLVERS: [fn(&str) -> String; 6] = [
+const PUZZLE_NUMBER: u8 = 7;
+const SOLVERS: [fn(&str) -> String; 7] = [
     puzzle_01::f,
     puzzle_02::f,
     puzzle_03::f,
     puzzle_04::f,
     puzzle_05::f,
     puzzle_06::f,
+    puzzle_07::f,
 ];
 
 fn main() {
